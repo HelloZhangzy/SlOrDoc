@@ -1,0 +1,4 @@
+LIBRARY XXTea
+	EXPORTS
+		btea	@1
+		crc_sum @2

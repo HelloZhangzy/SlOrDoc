@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\Administrator\Documents\RAD Studio\Projects\Unit2.pas=D:\Current project\Project\ZZY\MT3\ProcCode\MeterDebugDemo_17A\MeterDebugDemo.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dproj,C:\Users\Administrator\Documents\RAD Studio\Projects\Project1.dproj=D:\Current project\Project\ZZY\MT3\ProcCode\MeterDebugDemo_17A\MeterDebugDemo_17A.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\Administrator\Documents\RAD Studio\Projects\Unit2.dfm=D:\Current project\Project\ZZY\MT3\ProcCode\MeterDebugDemo_17A\MeterDebugDemo.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

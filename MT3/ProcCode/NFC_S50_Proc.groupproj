@@ -1,0 +1,72 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{1679F612-585C-4A10-B9DF-5A2846125F9B}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Demo\MT3_S50_Demo.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Interface\MT3_S50_Lib.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="MeterDebugDemo_17A\MeterDebugDemo_17A.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="KeyGenerate\KeyGenerate.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="MT3_S50_Demo">
+			<MSBuild Projects="Demo\MT3_S50_Demo.dproj"/>
+		</Target>
+		<Target Name="MT3_S50_Demo:Clean">
+			<MSBuild Targets="Clean" Projects="Demo\MT3_S50_Demo.dproj"/>
+		</Target>
+		<Target Name="MT3_S50_Demo:Make">
+			<MSBuild Targets="Make" Projects="Demo\MT3_S50_Demo.dproj"/>
+		</Target>
+		<Target Name="MT3_S50_Lib">
+			<MSBuild Projects="Interface\MT3_S50_Lib.dproj"/>
+		</Target>
+		<Target Name="MT3_S50_Lib:Clean">
+			<MSBuild Targets="Clean" Projects="Interface\MT3_S50_Lib.dproj"/>
+		</Target>
+		<Target Name="MT3_S50_Lib:Make">
+			<MSBuild Targets="Make" Projects="Interface\MT3_S50_Lib.dproj"/>
+		</Target>
+		<Target Name="MeterDebugDemo_17A">
+			<MSBuild Projects="MeterDebugDemo_17A\MeterDebugDemo_17A.dproj"/>
+		</Target>
+		<Target Name="MeterDebugDemo_17A:Clean">
+			<MSBuild Targets="Clean" Projects="MeterDebugDemo_17A\MeterDebugDemo_17A.dproj"/>
+		</Target>
+		<Target Name="MeterDebugDemo_17A:Make">
+			<MSBuild Targets="Make" Projects="MeterDebugDemo_17A\MeterDebugDemo_17A.dproj"/>
+		</Target>
+		<Target Name="KeyGenerate">
+			<MSBuild Projects="KeyGenerate\KeyGenerate.dproj"/>
+		</Target>
+		<Target Name="KeyGenerate:Clean">
+			<MSBuild Targets="Clean" Projects="KeyGenerate\KeyGenerate.dproj"/>
+		</Target>
+		<Target Name="KeyGenerate:Make">
+			<MSBuild Targets="Make" Projects="KeyGenerate\KeyGenerate.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="MT3_S50_Demo;MT3_S50_Lib;MeterDebugDemo_17A;KeyGenerate"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="MT3_S50_Demo:Clean;MT3_S50_Lib:Clean;MeterDebugDemo_17A:Clean;KeyGenerate:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="MT3_S50_Demo:Make;MT3_S50_Lib:Make;MeterDebugDemo_17A:Make;KeyGenerate:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
